@@ -27,4 +27,4 @@ jobs:
           file: ./src/AzureAppConfigurationEmulator/Dockerfile
           context: .
           push: true
-          tags: ${{ github.repository_owner }}/${{ github.repository }}:latest
+          tags: ${{ github.repository }}:latest
