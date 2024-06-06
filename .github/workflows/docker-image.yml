@@ -27,4 +27,4 @@ jobs:
           file: ./src/AzureAppConfigurationEmulator/Dockerfile
           context: .
           push: true
-          tags: ${{ github.repository }}:latest
+          tags: ghcr.io/${{ github.repository }}:latest
