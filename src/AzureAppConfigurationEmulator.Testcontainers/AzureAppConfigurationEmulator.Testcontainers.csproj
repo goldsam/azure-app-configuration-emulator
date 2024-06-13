@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Testcontainers module for azure-app-configuration-emulator</Description>
+        <TargetFrameworks>netstandard2.1;net6.0;net8.0</TargetFrameworks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageTags>azure;app configuration;docker;testcontainer;testcontainers</PackageTags>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <CodeAnalysisRuleSet>../../AzureAppConfigurationEmulator.ruleset</CodeAnalysisRuleSet>
+        <AssemblyOriginatorKeyFile>../../AzureAppConfigurationEmulator.snk</AssemblyOriginatorKeyFile>
+        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <!--<SignAssembly>true</SignAssembly>-->
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Testcontainers" Version="[3.7.0]" />
+        <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.2" />
+    </ItemGroup>
+
+</Project>
